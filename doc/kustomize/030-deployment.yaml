@@ -59,6 +59,8 @@ spec:
           image: jitsi/prosody:stable-6826
           imagePullPolicy: IfNotPresent
           env:
+            - name: PUBLIC_URL
+              value: ""
             - name: XMPP_DOMAIN
               value: meet.jitsi
             - name: XMPP_AUTH_DOMAIN
@@ -94,6 +96,8 @@ spec:
           image: jitsi/web:stable-6826
           imagePullPolicy: IfNotPresent
           env:
+            - name: PUBLIC_URL
+              value: ""
             - name: XMPP_SERVER
               value: localhost
             - name: JICOFO_AUTH_USER
